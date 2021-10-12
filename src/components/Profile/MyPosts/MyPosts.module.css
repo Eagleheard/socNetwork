@@ -1,0 +1,28 @@
+.myposts {
+    padding: 10px;
+}
+.content {
+ grid-area: c;
+ background-color: slateblue;
+}
+.backlay {
+ width: 100%;
+ height: 200px;
+}
+.field {
+    border-style: solid;
+    resize: none;
+    overflow: auto;
+    width: 300px;
+
+}
+.add {
+    padding: 10px;
+}
+.add button {
+    width: 70px;
+    border-radius: 30px;
+    background-color: cornflowerblue;
+    border-style:solid;
+}
+

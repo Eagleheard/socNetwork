@@ -1,0 +1,25 @@
+.backlay {
+    width: 100%;
+    height: 300px;
+   }
+.ava {
+    position: relative;
+    margin-top: -70px;
+    margin-left: 50px;
+    
+}
+.persava {
+    border-radius: 150px;
+    width: 100px;
+    border: 3px solid white;
+}
+.desc {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+.desc span {
+    font-style: italic;
+    
+}
+   

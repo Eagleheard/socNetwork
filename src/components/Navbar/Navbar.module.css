@@ -1,0 +1,18 @@
+.nav {
+  grid-area: n;
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+ }
+ .nav div {
+   padding: 10px;
+   padding-left: 50px;
+ }
+ .item a {
+   color: cornflowerblue;
+   text-decoration: none;
+ }
+ .item a.active {
+   color: blue;
+ }
+ 
