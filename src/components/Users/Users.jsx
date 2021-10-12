@@ -1,6 +1,8 @@
 import s from './Users.module.css'
 import userPhoto from '../../assets/images/wp3092009.jpg';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import axios from "axios";
+import { usersAPI } from '../../api/api';
 
 const Users = (props) => {
     let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -18,13 +20,26 @@ const Users = (props) => {
                 <span>
                     <div>
                         <NavLink to={'/profile/' + u.id}>
-                        <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.photo}></img>
+                            <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.photo}></img>
                         </NavLink>
                     </div>
                     <div>
                         {u.followed ?
-                            <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button> :
-                            <button onClick={() => { props.follow(u.id) }}> Follow </button>}
+                            <button onClick={() => {
+                                usersAPI.unfollow(u.id).then(data => {
+                                    if (data.resultCode === 0) { props.unfollow(u.id) }
+                                })
+
+
+                            }}>Unfollow</button> :
+
+                            <button onClick={() => {
+                                usersAPI.follow(u.id).then(data => {
+                                    if (data.resultCode === 0) { props.follow(u.id) }
+                                })
+
+
+                            }}> Follow </button>}
                     </div>
                 </span>
                 <span>
