@@ -3,7 +3,6 @@ import s from "./Header.module.css";
 
 
 const Header = (props) => {
-    debugger;
     return (
         
         <header className={s.header}>
